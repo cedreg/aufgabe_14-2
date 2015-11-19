@@ -32,8 +32,39 @@ int main()
         //ausführung programm
 
         ende = algOtag(jahr); //hajr an function schicken und ergebniss "ende" zuweisen
-	}
 
+        if (ende > 0){
+            cout << "Der Ostersonntag im Jahr " << jahr << " ist am " << ende << " April." << endl;
+
+        } else {
+            switch (ende){ // auswertung welcher Tag + Ausgabe
+            case 0:
+                cout << "Der Ostersonntag im Jahr " << jahr << " ist am 31. Maerz" << endl;
+                break;
+            case -1:
+                cout << "Der Ostersonntag im Jahr " << jahr << " ist am 30. Maerz" << endl;
+                break;
+            case -2:
+                cout << "Der Ostersonntag im Jahr " << jahr << " ist am 29. Maerz" << endl;
+                break;
+            case -3:
+                cout << "Der Ostersonntag im Jahr " << jahr << " ist am 28. Maerz" << endl;
+                break;
+            case -4:
+                cout << "Der Ostersonntag im Jahr " << jahr << " ist am 27. Maerz" << endl;
+                break;
+            case -5:
+                cout << "Der Ostersonntag im Jahr " << jahr << " ist am 26. Maerz" << endl;
+                break;
+            case -6:
+                cout << "Der Ostersonntag im Jahr " << jahr << " ist am 25. Maerz" << endl;
+                break;
+            }
+        }
+    } else {
+        // shutdown ausgabe nicht im bereich
+        cout << "Eingabe falsch!" << endl;
+    }
 	
     return 0;
 }
